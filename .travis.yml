@@ -11,7 +11,7 @@ jobs:
 
 script:
   - travis_wait 60 sleep 60m &
-  - kerl build $TARGET
-  - kerl install $TARGET $HOME/kerl/22.0
-  - . $HOME/kerl/$TARGET/activate
+  - kerl build $VERSION
+  - kerl install $VERSION $HOME/kerl/22.0
+  - . $HOME/kerl/$VERSION/activate
   - erl -version
