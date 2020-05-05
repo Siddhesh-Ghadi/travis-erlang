@@ -6,6 +6,9 @@ arch:
   
 language: erlang
 
-otp_release:
-  - 21.2
-  - 22.0
+#otp_release:
+#  - 21.2
+#  - 22.0
+  
+script:
+  - kerl list installations 
