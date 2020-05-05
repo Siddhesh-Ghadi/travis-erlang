@@ -1,15 +1,18 @@
 dist: bionic
   
-arch:
-  - amd64
-  - ppc64le
+arch: ppc64le
   
-
 #otp_release:
 #  - 21.2
 #  - 22.0
-  
+jobs:
+  include:
+    - env: TARGET=22.0
+    - env: TARGET=21.2
+
 script:
   - travis_wait 60 sleep 60m &
-  - kerl build 22.0
-  - kerl install 22.0 $HOME/kerl/22.0
+  - kerl build $TARGET
+  - kerl install $TARGET $HOME/kerl/22.0
+  - . $HOME/kerl/$TARGET/activate
+  - erl -version
