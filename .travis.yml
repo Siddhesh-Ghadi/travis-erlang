@@ -10,6 +10,6 @@ arch:
 #  - 22.0
   
 script:
-  - travis_wait 20 sleep 20m &
+  - travis_wait 60 sleep 60m &
   - kerl build 22.0
   - kerl install 22.0 $HOME/kerl/22.0
