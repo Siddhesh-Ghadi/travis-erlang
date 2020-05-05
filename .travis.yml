@@ -6,9 +6,8 @@ arch: ppc64le
 #  - 21.2
 #  - 22.0
 jobs:
-  include:
-    - env: TARGET=22.0
-    - env: TARGET=21.2
+  - env: VERSION=22.0
+  - env: VERSION=21.2
 
 script:
   - travis_wait 60 sleep 60m &
