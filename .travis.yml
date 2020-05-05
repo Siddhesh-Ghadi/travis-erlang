@@ -4,7 +4,6 @@ arch:
   - amd64
   - ppc64le
   
-language: erlang
 
 #otp_release:
 #  - 21.2
