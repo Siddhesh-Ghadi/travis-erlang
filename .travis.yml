@@ -2,16 +2,9 @@ dist: bionic
   
 arch: ppc64le
   
-#otp_release:
-#  - 21.2
-#  - 22.0
-jobs:
-  - env: VERSION=22.0
-  - env: VERSION=21.2
-
+otp_release:
+  - 21.2
+  - 22.0
+ 
 script:
-  - travis_wait 60 sleep 60m &
-  - kerl build $VERSION
-  - kerl install $VERSION $HOME/kerl/22.0
-  - . $HOME/kerl/$VERSION/activate
   - erl -version
