@@ -2,9 +2,9 @@ dist: bionic
   
 arch: ppc64le
  
-language: erlang 
-otp_release:
-  - "23.0.2"
+language: erlang
+
+otp_release: "23.0.2"
 
  
 script:
